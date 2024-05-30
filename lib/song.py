@@ -16,7 +16,7 @@ class Song:
     artist_count = {}
     
     def __init__(self, name, artist, genre):
-        # Instance attribute 
+        # Instance attributes 
         self.name = name
         self.artist = artist
         self.genre = genre
@@ -27,7 +27,7 @@ class Song:
         # Adding the genre to the list of unique genres
         Song.add_to_genres(genre)
         
-        # Add an artist to the list of unique artists
+        # Adding an artist to the list of unique artists
         Song.add_to_artists(artist)
         
         # Updating the count of songs for the genre
@@ -54,7 +54,7 @@ class Song:
         if genre in cls.genre_count:
             cls.genre_count[genre] += 1
         else:
-            # Add a new key-value pair with the genre as the key set to 1 as the initial value
+            # Adding a new key-value pair with the genre as the key set to 1 as the initial value
             cls.genre_count[genre] = 1
     
     @classmethod
@@ -63,5 +63,5 @@ class Song:
         if artist in cls.artist_count:
             cls.artist_count[artist] += 1
         else:
-            # Add a new key-value pair with the artist as the key and 1 as the initial value
+            # Adding a new key-value pair with the artist as the key and 1 as the initial value
             cls.artist_count[artist] = 1
